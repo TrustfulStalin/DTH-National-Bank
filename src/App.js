@@ -40,7 +40,7 @@ function App() {
         <Route exact path="/Create" element={<MyForm />} />
         <Route exact path="/Transaction/:id" element={<Per />} />
         <Route exact path="/Log" element={<Login />} />
-        <Route exact path="/all" element={<Real />} />
+        <Route exact path="/show" element={<Real />} />
         {/* Map through the user data and create routes for each user */}
         {user && user.map(userData => (
           <Route key={userData.id} path={`/Transaction/${userData.id}`} element={<Per userData={userData} />} />

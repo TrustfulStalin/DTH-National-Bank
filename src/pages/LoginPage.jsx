@@ -18,50 +18,59 @@ function Login()
  let newID = "";
     const navigate = useNavigate()  
 
-//   const sub = (event) => {
-//   event.preventDefault(); 
-//   console.log(`${Username}`)
-//   newID = ID;
-//   if (Username === "tevon64")
-//   {
-// console.log("step 1")
-// alert("Login successful, Redirecting....")
-// navigate("/Transaction/" + newID)
+  const sub = (event) => {
+ event.preventDefault(); 
+  console.log(`${Username}`)
+  newID = ID;
+  if (Username === "tevon64")
+   {
+ console.log("step 1")
+ alert("Login successful, Redirecting....")
+navigate("/Transaction/" + ID)
 
-//   }
-// else
-//   {
-//   console.log("missed")
-//   }
+   }
+ if(Username === "Ricky Ricky Ricky")
+   {
+    console.log("step 1")
+    alert("Login successful, Redirecting....")
+   navigate("/Transaction/" + ID)
+   
+   }
+   if(Username === "mickeymouse")
+    {
+     console.log("step 1")
+     alert("Login successful, Redirecting....")
+    navigate("/Transaction/" + ID)
+    
+    }
+    if(Username === "richguy123")
+      {
+       console.log("step 1")
+       alert("Login successful, Redirecting....")
+      navigate("/Transaction/" + ID)
+      
+      }if(Username === "BruceWayne")
+        {
+         console.log("step 1")
+         alert("Login successful, Redirecting....")
+        navigate("/Transaction/" + ID)
+        
+        }
+        if(Username === "Water Gun Arm")
+          {
+           console.log("step 1")
+           alert("Login successful, Redirecting....")
+          navigate("/Transaction/" + ID)
+          
+          }
+   else
+   {
+    console.log("missed")
+   }
 
 
-//   }
-
-const sub = async (event) => {
-  event.preventDefault();
-  try {
-      const response = await fetch('http://localhost:3000/log', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ username: Username})
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-          setID(data.id);
-          alert("Login successful, Redirecting....");
-          navigate("/Transaction/" + data.id);
-      } else {
-          alert(data.message);
-      }
-  } catch (error) {
-      console.error(error);
-      alert("An error occurred during login.");
   }
-};
+
 
 
 return(
